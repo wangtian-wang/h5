@@ -1,0 +1,62 @@
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 4.4rem;
+  background-color: #cf5f55;
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #fff;
+  h1 {
+    font-size: 1.8rem;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 4.4rem;
+  height: 4.4rem;
+   
+  &.left::before {
+    content: '';
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url(../../img/backward.png) no-repeat 0 0  / 100% 100%;
+    left: 0;
+    
+  }
+
+}
+.icon1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4.4rem;
+  height: 4.4rem;
+    
+  &.right::after {
+    content: '';
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url(../../img/follow.png) no-repeat 0 0 / 100% 100%;
+    
+  }
+}
+
+
+}

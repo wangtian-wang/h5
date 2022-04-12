@@ -1,0 +1,25 @@
+.error-tip {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 9;
+  margin: -4rem 0 0 -4rem;
+  width: 8rem;
+  height: 11rem;
+
+    .error-icon {
+      width: 10rem;
+      height: 12rem;
+      margin-bottom: .1rem;
+      background: url(../../img/network_error.png) no-repeat 0 0 / 100% 100%;
+    }
+    
+    p {
+      font-size: 1.4rem;
+      color: #999;
+    }
+}
