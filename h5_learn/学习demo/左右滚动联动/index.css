@@ -1,0 +1,44 @@
+body {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.banner {
+  height: 500px;
+}
+.container {
+  width: 70%;
+  margin: auto;
+}
+.scroll {
+  border: 1px solid hotpink;
+}
+.container .scroll-item {
+  height: 400px;
+  box-sizing: border-box;
+  line-height: 400px;
+  text-align: center;
+  box-shadow: 0 0 2px 3px #ccc;
+  margin-bottom: 10px;
+}
+.slidebar {
+  position: fixed;
+  top: 50%;
+  right: 0px;
+  width: 100px;
+}
+.slidebar .slide-item {
+  height: 40px;
+  line-height: 40px;
+}
+.slidebar .slide-item:hover {
+  font-size: 26px;
+  color: wheat;
+}
+.active {
+  font-size: 26px;
+  color: wheat;
+}

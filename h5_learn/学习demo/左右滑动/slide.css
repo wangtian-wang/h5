@@ -1,0 +1,70 @@
+/*
+ 左右滑屏 DOM结构
+ <section>
+      <div class="slide-page">
+        <div class="slide-wrapper">
+          <div class="page-item">
+            <div class="inner">page one</div>
+          </div>
+          <div class="page-item">
+            <div class="inner">page two</div>
+          </div>
+          <div class="page-item">
+            <div class="inner">page three</div>
+          </div>
+          <div class="page-item">
+            <div class="inner">page four</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+*/
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+body,
+section,
+.slide-page,
+.slide-wrapper {
+  height: 100vh;
+}
+.slide-page {
+  position: relative;
+  overflow: hidden;
+}
+.slide-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 150rem;
+}
+.page-item {
+  width: 37.5rem;
+}
+.inner {
+  font-size: 5rem;
+  text-align: center;
+  line-height: 100vh;
+  height: 100vh;
+}
+.page-item:nth-child(1) .inner {
+  background-color: lightblue;
+}
+.page-item:nth-child(2) .inner {
+  background-color: lightgoldenrodyellow;
+}
+.page-item:nth-child(3) .inner {
+  background-color: rgb(211, 172, 66);
+}
+.page-item:nth-child(4) .inner {
+  background-color: yellow;
+}
