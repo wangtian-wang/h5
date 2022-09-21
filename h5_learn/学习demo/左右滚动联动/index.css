@@ -14,7 +14,10 @@ body {
   margin: auto;
 }
 .scroll {
-  border: 1px solid hotpink;
+  margin-top: 300px;
+  /* padding-top: 100px; */
+  position: relative;
+  background-color: aliceblue;
 }
 .container .scroll-item {
   height: 400px;

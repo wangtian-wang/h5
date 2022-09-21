@@ -17,18 +17,10 @@
     oScrollItemsHeight[index] = getHeight(elem);
   });
   oSlideItem.forEach((elem, index) => {
-    // elem.addEventListener("mouseover", () => {
-    //   console.log(index, curIndex);
-    //   elem.classList.add("active");
-    // });
-    // 页面停在那个位置 对应的侧边栏显示高亮样式
-    // elem.addEventListener("mouseout", () => {
-    //   if (index !== curIndex) elem.classList.remove("active");
-    // });
     elem.addEventListener("click", () => {
       click = true;
       oSlideItem[lastIndex].classList.remove("active");
-      oSlideItem[curIndex].classList.remove("active");
+      //   oSlideItem[curIndex].classList.remove("active");
       oSlideItem[index].classList.add("active");
       curIndex = index;
       window.scrollTo({
@@ -38,8 +30,9 @@
     });
   });
   function handleScroll() {
-    let top = this.pageYOffset;
-
+    /** 随着滚动,找到当前 元素的offsettop 大于 已经滚动的window的scrollY */
+    /** 假若元素的第一个定位的父元素有padding或者margin 那这个计算结果就不准确  必须减去这个值*/
+    let top = this.pageYOffset - 300;
     oScrollItemsHeight.forEach((elem, index) => {
       if (elem < top && !click) {
         curIndex = index;
@@ -51,5 +44,6 @@
     click = false;
   }
   handleScroll();
-  window.addEventListener("scroll", _.debounce(handleScroll, 200));
+  window.addEventListener("scroll", _.debounce(handleScroll, 100), false); //
 })();
+// getBoundingClientRect() window.innerWidth window.innerHeight
